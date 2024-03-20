@@ -14,10 +14,99 @@
     <img src="assets/images/logo.png" class="logo" />
   </header>
   <main id="main">
-    <div class="photograph-header">
+
+    <section class="photograph-header">
+      <div>
+        <h1>Name Photographe</h1>
+        <p>country ville</p>
+        <p>Tagline</p>
+      </div>
       <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
-    </div>
+      <img src="./assets/photographers/Portrait/MimiKeel.jpg" alt="">
+    </section>
+
+    <section class="photograph-filter">
+      <label for="sort">Tier par</label>
+      <select id="sort">
+        <option value="likes">Popularité</option>
+        <option value="dates">Date</option>
+        <option value="title">Titre</option>
+      </select>
+    </section>
+
+    <section class="photograph-media">
+      <article class="card"><img src="./assets/photographers/Mimi/Animals_Rainbow.jpg" alt="">
+        <div class="card-body">
+          <h3>title img</h3>
+          <div class="card-likes">
+            <span>25</span>
+            <button class="btn-likes heart" type="button" aria-label="Ajouter un like"><i
+                class="fa-regular fa-heart"></i></button>
+          </div>
+        </div>
+      </article>
+      <article class="card"><img src="./assets/photographers/Mimi/Animals_Rainbow.jpg" alt="">
+        <div class="card-body">
+          <h3>title img</h3>
+          <div class="card-likes">
+            <span>25</span>
+            <button class="btn-likes heart" type="button" aria-label="Ajouter un like"><i
+                class="fa-regular fa-heart"></i></button>
+          </div>
+        </div>
+      </article>
+      <article class="card"><img src="./assets/photographers/Mimi/Animals_Rainbow.jpg" alt="">
+        <div class="card-body">
+          <h3>title img</h3>
+          <div class="card-likes">
+            <span>25</span>
+            <button class="btn-likes heart" type="button" aria-label="Ajouter un like"><i
+                class="fa-regular fa-heart"></i></button>
+          </div>
+        </div>
+      </article>
+      <article class="card"><img src="./assets/photographers/Mimi/Animals_Rainbow.jpg" alt="">
+        <div class="card-body">
+          <h3>title img</h3>
+          <div class="card-likes">
+            <span>25</span>
+            <button class="btn-likes heart" type="button" aria-label="Ajouter un like"><i
+                class="fa-regular fa-heart"></i></button>
+          </div>
+        </div>
+      </article>
+      <article class="card"><img src="./assets/photographers/Mimi/Animals_Rainbow.jpg" alt="">
+        <div class="card-body">
+          <h3>title img</h3>
+          <div class="card-likes">
+            <span>25</span>
+            <button class="btn-likes heart" type="button" aria-label="Ajouter un like"><i
+                class="fa-regular fa-heart"></i></button>
+          </div>
+        </div>
+      </article>
+      <article class="card"><img src="./assets/photographers/Mimi/Animals_Rainbow.jpg" alt="">
+        <div class="card-body">
+          <h3>title img</h3>
+          <div class="card-likes">
+            <span>25</span>
+            <button class="btn-likes heart" type="button" aria-label="Ajouter un like"><i
+                class="fa-regular fa-heart"></i></button>
+          </div>
+        </div>
+      </article>
+    </section>
+    <aside class="photograph-aside">
+      <div>
+        <span id="totalLikes">680</span>&nbsp;
+        <span class="fa-solid fa-heart" aria-hidden="true"></span>
+      </div>
+      <div>
+        <span id="price">400</span>&nbsp;€&nbsp;jour
+      </div>
+    </aside>
   </main>
+
   <div id="contact_modal">
     <div class="modal">
       <header>
@@ -26,7 +115,7 @@
       </header>
       <form>
         <div>
-          <label>Prénom</label>
+          <label>Prénomz</label>
           <input />
         </div>
         <button class="contact_button">Envoyer</button>
