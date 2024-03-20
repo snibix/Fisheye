@@ -5,3 +5,21 @@ export async function getData() {
   });
   return data;
 }
+
+export async function getPhotographers() {
+  const data = await getData();
+  // et bien retourner le tableau photographers seulement une fois récupéré
+  return {
+    photographers: data.photographers,
+  };
+}
+
+export async function getPhotographer(id) {
+  const data = await getData();
+  const medias = data.media.filter((media) => media.photographerId === id);
+  const photographer = data.photographers.find(
+    (photographer) => photographer.id === id
+  );
+  photographer.medias = medias;
+  return photographer;
+}

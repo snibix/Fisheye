@@ -1,13 +1,5 @@
 import { photographerTemplate } from "../templates/photographer.js";
-import { getData } from "../utils/data.js";
-async function getPhotographers() {
-  const data = await getData();
-  console.log(data);
-  // et bien retourner le tableau photographers seulement une fois récupéré
-  return {
-    photographers: data.photographers,
-  };
-}
+import { getPhotographers } from "../utils/data.js";
 
 async function displayData(photographers) {
   const photographersSection = document.querySelector(".photographer_section");
