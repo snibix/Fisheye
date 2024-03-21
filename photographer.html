@@ -10,19 +10,21 @@
 </head>
 
 <body>
-  <header>
-    <img src="assets/images/logo.png" class="logo" />
+  <header class="header-logo">
+    <a href="./index.html">
+      <img src="assets/images/logo.png" class="logo" />
+    </a>
   </header>
   <main id="main">
 
     <section class="photograph-header">
       <div>
-        <h1>Name Photographe</h1>
-        <p>country ville</p>
-        <p>Tagline</p>
+        <h1 class="photograph-title"></h1>
+        <p class="photograph-country"></p>
+        <p class="photograph-tagline"></p>
       </div>
       <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
-      <img src="./assets/photographers/Portrait/MimiKeel.jpg" alt="">
+      <img src="" alt="" class="photograph-img">
     </section>
 
     <section class="photograph-filter">
@@ -34,67 +36,7 @@
       </select>
     </section>
 
-    <section class="photograph-media">
-      <article class="card"><img src="./assets/photographers/Mimi/Animals_Rainbow.jpg" alt="">
-        <div class="card-body">
-          <h3>title img</h3>
-          <div class="card-likes">
-            <span>25</span>
-            <button class="btn-likes heart" type="button" aria-label="Ajouter un like"><i
-                class="fa-regular fa-heart"></i></button>
-          </div>
-        </div>
-      </article>
-      <article class="card"><img src="./assets/photographers/Mimi/Animals_Rainbow.jpg" alt="">
-        <div class="card-body">
-          <h3>title img</h3>
-          <div class="card-likes">
-            <span>25</span>
-            <button class="btn-likes heart" type="button" aria-label="Ajouter un like"><i
-                class="fa-regular fa-heart"></i></button>
-          </div>
-        </div>
-      </article>
-      <article class="card"><img src="./assets/photographers/Mimi/Animals_Rainbow.jpg" alt="">
-        <div class="card-body">
-          <h3>title img</h3>
-          <div class="card-likes">
-            <span>25</span>
-            <button class="btn-likes heart" type="button" aria-label="Ajouter un like"><i
-                class="fa-regular fa-heart"></i></button>
-          </div>
-        </div>
-      </article>
-      <article class="card"><img src="./assets/photographers/Mimi/Animals_Rainbow.jpg" alt="">
-        <div class="card-body">
-          <h3>title img</h3>
-          <div class="card-likes">
-            <span>25</span>
-            <button class="btn-likes heart" type="button" aria-label="Ajouter un like"><i
-                class="fa-regular fa-heart"></i></button>
-          </div>
-        </div>
-      </article>
-      <article class="card"><img src="./assets/photographers/Mimi/Animals_Rainbow.jpg" alt="">
-        <div class="card-body">
-          <h3>title img</h3>
-          <div class="card-likes">
-            <span>25</span>
-            <button class="btn-likes heart" type="button" aria-label="Ajouter un like"><i
-                class="fa-regular fa-heart"></i></button>
-          </div>
-        </div>
-      </article>
-      <article class="card"><img src="./assets/photographers/Mimi/Animals_Rainbow.jpg" alt="">
-        <div class="card-body">
-          <h3>title img</h3>
-          <div class="card-likes">
-            <span>25</span>
-            <button class="btn-likes heart" type="button" aria-label="Ajouter un like"><i
-                class="fa-regular fa-heart"></i></button>
-          </div>
-        </div>
-      </article>
+    <section class="photograph-medias">
     </section>
     <aside class="photograph-aside">
       <div>
@@ -102,7 +44,7 @@
         <span class="fa-solid fa-heart" aria-hidden="true"></span>
       </div>
       <div>
-        <span id="price">400</span>&nbsp;€&nbsp;jour
+        <span id="price">400</span>&nbsp;€&nbsp;/&nbsp;jour
       </div>
     </aside>
   </main>
@@ -122,6 +64,7 @@
       </form>
     </div>
   </div>
+  <script src="https://kit.fontawesome.com/440f39c80d.js" crossorigin="anonymous"></script>
   <script src="./scripts/pages/photographer.js" type="module"></script>
   <!-- <script src="/scripts/utils/contactForm.js"></script> -->
 </body>

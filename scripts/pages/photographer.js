@@ -1,26 +1,43 @@
-import { photographerTemplate } from "../templates/photographerCard.js";
+import { mediaTemplate } from "../templates/mediaCard.js";
 import { getPhotographer, getPhotographers } from "../utils/data.js";
 
 //Mettre le code JavaScript lié à la page photographer.html
-let params = new URLSearchParams(window.location.search);
-let photographerId = parseInt(params.get("id"));
-console.log(photographerId);
+function displayData(photographer) {
+  // ...
+  const header = document.querySelector(".photograph-header");
 
-console.log(await getPhotographer(photographerId));
+  const photographTitle = header.querySelector(".photograph-title");
+  photographTitle.textContent = photographer.name;
 
-function cardMediaPhotographer(photographerId, data) {
-  const dataPhotographer = getPhotographer(photographerId);
-  const { name, portrait, country, city, tagline, price, id } = data;
-  function cardPhotographer(data, dataPhotographer) {
-    const article = document.createElement("artcile");
+  const photographCountry = header.querySelector(".photograph-country");
+  photographCountry.textContent = `${photographer.country}, ${photographer.city}`;
 
-    const img = document.createElement("img");
+  const photographTagline = header.querySelector(".photograph-tagline");
+  photographTagline.textContent = photographer.tagline;
 
-    const namePhotographer = document.createElement("h1");
-    namePhotographer.textContent = name;
+  const photographImg = header.querySelector(".photograph-img");
+  photographImg.src = `./assets/photographers/portrait/${photographer.portrait}`;
 
-    article.appendChild(namePhotographer);
-    return article;
-  }
+  const mediaSection = document.querySelector(".photograph-medias");
+  photographer.medias.forEach((media) => {
+    mediaSection.appendChild(mediaTemplate(media));
+  });
+
+  const totalLikes = document.querySelector("#totalLikes");
+  totalLikes.textContent = photographer.medias.reduce((carry, media) => {
+    return carry + media.likes;
+  }, 0);
+
+  const price = document.querySelector("#price");
+  price.textContent = photographer.price;
 }
-console.log(cardMediaPhotographer(photographerId, data));
+
+async function init() {
+  let params = new URLSearchParams(window.location.search);
+  let photographerId = parseInt(params.get("id"));
+  console.log(photographerId);
+  const photographer = await getPhotographer(photographerId);
+  displayData(photographer);
+}
+
+init();

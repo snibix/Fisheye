@@ -5,16 +5,6 @@
 #contact_modal {
   display: none;
 }
-
-.photograph-header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #fafafa;
-  height: 300px;
-  margin: 0 100px;
-}
-
 .contact_button {
   font-size: 20px;
   font-weight: bold;
@@ -81,11 +71,41 @@ form input {
   border: none;
   border-radius: 5px;
 }
-.photograph-header img {
+.header-logo {
+  width: 1600px;
+  margin: auto;
+}
+.photograph-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa;
+  height: 300px;
+  margin: 0 100px;
+  padding: 0 50px;
+}
+.photograph-header .photograph-title {
+  margin: 0;
+  font-size: 64px;
+  padding: 0 10px;
+}
+.photograph-header .photograph-country {
+  font-size: 30px;
+  margin: 0;
+  padding: 15px 10px;
+  color: #901c1c;
+}
+.photograph-header .photograph-tagline {
+  font-size: 20px;
+  margin: 0;
+  padding: 15px 10px;
+  color: #525252;
+}
+.photograph-header .photograph-img {
   height: 200px;
   width: 200px;
   border-radius: 50%;
-  object-position: center;
+  object-fit: cover;
 }
 .photograph-filter {
   padding: 20px 100px 58px;
@@ -97,37 +117,53 @@ form input {
   color: #fff;
   background-color: #901c1c;
   margin-left: 1rem;
-  padding: 1rem;
+  padding: 0.5rem 1em;
   border: none;
   font-size: 0.8em;
 }
-.photograph-media {
+.photograph-medias {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 0 100px 100px;
   gap: 30px 95px;
 }
-.photograph-media img {
+.photograph-medias .card-img {
   width: 100%;
-  height: 80%;
+  aspect-ratio: 1;
   object-fit: cover;
+  border-radius: 10px;
 }
-.photograph-media .card-body {
+.photograph-medias .card-body {
   display: flex;
   justify-content: space-between;
   gap: 0.5em;
   font-size: 1.5em;
   font-weight: bold;
 }
-.photograph-media .card-body h3 {
+.photograph-medias .card-title {
   color: #901c1c;
+  margin: 0;
+  font-size: 28px;
+  padding: 10px 0;
 }
-.photograph-media .card-likes {
+.photograph-medias .card-likes {
   display: flex;
   align-items: center;
   justify-content: center;
   color: #901c1c;
-  gap: 0.25em;
+}
+.card-likes .number-likes {
+  font-size: 23px;
+}
+.card-likes .btn-likes {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.btn-likes .icon-likes {
+  font-weight: 900;
+  font-size: 23px;
+  color: #901c1c;
 }
 .photograph-aside {
   position: fixed;
@@ -135,8 +171,9 @@ form input {
   gap: 2em;
   bottom: 0;
   right: calc(50vw - 770px);
-  padding: 2rem 3rem;
+  padding: 1.5rem 3rem;
   background-color: #db8876;
   font-size: 1.5rem;
   font-weight: bold;
+  border-radius: 10px 10px 0 0;
 }

@@ -1,17 +1,19 @@
 export function photographerTemplate(data) {
   const { name, portrait, country, city, tagline, price, id } = data;
 
-  const picture = `assets/photographers/Portrait/${portrait}`;
+  const picture = `assets/photographers/portrait/${portrait}`;
 
   function getUserCardDOM() {
     const article = document.createElement("article");
+    article.className = "card";
 
     const img = document.createElement("img");
     img.src = picture;
+    img.className = "card-img";
 
     const h2 = document.createElement("h2");
     h2.textContent = name;
-    // h2.className = "name_photographer";
+    h2.className = "card-title";
 
     const countryElement = document.createElement("p");
     countryElement.textContent = city + ", " + country;

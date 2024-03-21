@@ -1,4 +1,4 @@
-import { photographerTemplate } from "../templates/photographer.js";
+import { photographerTemplate } from "../templates/photographerCard.js";
 import { getPhotographers } from "../utils/data.js";
 
 async function displayData(photographers) {
