@@ -1,12 +1,12 @@
+import { mediaFactory } from "./mediaFactory.js";
+
 export function mediaTemplate(data) {
   const card = document.createElement("article");
   card.className = "card";
   card.dataset.id = data.id;
 
-  const img = document.createElement("img");
-  img.className = "card-img";
-  img.src = `./assets/photographers/medias/${data.photographerId}/${data.image}`;
-  card.appendChild(img);
+  const media = mediaFactory(data, true);
+  card.appendChild(media);
 
   const cardBody = document.createElement("div");
   cardBody.className = "card-body";
