@@ -9,10 +9,10 @@
 }
 .modal {
   position: fixed;
-  top: 5vw;
+  top: 4vw;
   left: 30vw;
   width: 30vw;
-  height: 70vh;
+  height: 75vh;
   justify-content: center;
   align-items: center;
   gap: 10px;
