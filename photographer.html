@@ -2,8 +2,9 @@
 <html>
 
 <head>
-  <link href="css/style.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="css/modal.css">
+  <link href="./css/style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="./css/modal.css">
+  <link rel="stylesheet" href="./css/lightbox.css">
   <meta charset="utf-8">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
@@ -49,7 +50,6 @@
       </div>
     </aside>
   </main>
-
   <div id="contact_modal" class="overlay_modal">
     <div class="modal">
       <header class="modal_header">
@@ -81,9 +81,28 @@
       </form>
     </div>
   </div>
+
+  <dialog id="lightbox" aria-hidden="true" aria-label="Image closeup view">
+    <div tabindex="1" class="content">
+      <figure tabindex="2" class="figure"></figure>
+      <button tabindex="4" class="previous" type="button" aria-labelledby="previous-lightbox">
+        <span class="fa-solid fa-angle-left" aria-hidden="true"></span>
+        <p id="previous-lightbox" class="sr-only">Précédent</p>
+      </button>
+      <button tabindex="5" class="next" type="button" aria-labelledby="next-lightbox">
+        <span class="fa-solid fa-angle-right" aria-hidden="true"></span>
+        <p id="next-lightbox" class="sr-only">Suivant</p>
+      </button>
+      <button tabindex="6" class="close" aria-labelledby="close-lightbox">
+        <span class="fa-solid fa-xmark" aria-hidden="true"></span>
+        <p id="close-lightbox" class="sr-only">Fermer la modale</p>
+      </button>
+    </div>
+  </dialog>
+
   <script src="https://kit.fontawesome.com/440f39c80d.js" crossorigin="anonymous"></script>
   <script src="./scripts/pages/photographer.js" type="module"></script>
-  <script src="./scripts/utils/contactForm.js"></script>
+
 </body>
 
 </html>

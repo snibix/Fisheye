@@ -23,14 +23,29 @@ export const mediaFactory = (media, thumbnail = false) => {
 };
 
 // Voir plus tard (utiliser une class pour faire la media factories)
+// class Img {
+//   constructor(data) {
+//     this.path = `./assets/photographers/medias`;
+//     this.img = document.createElement("img");
+//     this.img.src = `${path}/${media.photographerId}/${media.image}`;
+//     this.img.alt = data.media.title;
+//   }
+// }
+
+// class Video {
+//   constructor(data) {
+//     this.path = `./assets/photographers/medias`;
+//     this.media = document.createElement("video");
+//     this.media.src = `${path}/${media.photographerId}/${media.video}`;
+//   }
+// }
+
 // class mediaFactory {
 //   constructor(data) {
 //     if (data.image) {
-//       //   const img = document.createElement("img");
-//       return new img(data);
+//       return new Img(data);
 //     } else if (data.video) {
-//       //   const media = document.createElement("video");
-//       return new media(data);
+//       return new Video(data);
 //     } else {
 //       throw "Format de media non pris en charge";
 //     }

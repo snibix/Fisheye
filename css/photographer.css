@@ -2,9 +2,11 @@
   width: 1600px;
   margin: auto;
 }
+
 #contact_modal {
   display: none;
 }
+
 .contact_button {
   font-size: 20px;
   font-weight: bold;
@@ -13,7 +15,7 @@
   width: 170px;
   height: 70px;
   border: none;
-  background-color: #901c1c;
+  background-color: var(--primary-color);
   border-radius: 5px;
   cursor: pointer;
 }
@@ -35,7 +37,7 @@
   width: 100%;
 }
 
-.modal header img {
+.card .card-img {
   cursor: pointer;
 }
 
@@ -71,10 +73,12 @@ form input {
   border: none;
   border-radius: 5px;
 }
+
 .header-logo {
   width: 1600px;
   margin: auto;
 }
+
 .photograph-header {
   display: flex;
   justify-content: space-between;
@@ -84,16 +88,18 @@ form input {
   margin: 0 100px;
   padding: 0 50px;
 }
+
 .photograph-header .photograph-title {
   margin: 0;
   font-size: 64px;
   padding: 0 10px;
 }
+
 .photograph-header .photograph-country {
   font-size: 30px;
   margin: 0;
   padding: 15px 10px;
-  color: #901c1c;
+  color: var(--primary-color);
 }
 .photograph-header .photograph-tagline {
   font-size: 20px;
@@ -106,6 +112,7 @@ form input {
   width: 200px;
   border-radius: 50%;
   object-fit: cover;
+  filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.25));
 }
 .photograph-filter {
   padding: 20px 100px 58px;
@@ -115,7 +122,7 @@ form input {
 .photograph-filter select {
   font: inherit;
   color: #fff;
-  background-color: #901c1c;
+  background-color: var(--primary-color);
   margin-left: 1rem;
   padding: 0.5rem 1em;
   border: none;
@@ -141,7 +148,7 @@ form input {
   font-weight: bold;
 }
 .photograph-medias .card-title {
-  color: #901c1c;
+  color: var(--primary-color);
   margin: 0;
   font-size: 28px;
   padding: 10px 0;
@@ -150,7 +157,7 @@ form input {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #901c1c;
+  color: var(--primary-color);
 }
 .card-likes .number-likes {
   font-size: 23px;
@@ -163,7 +170,7 @@ form input {
 .btn-likes .icon-likes {
   font-weight: 900;
   font-size: 23px;
-  color: #901c1c;
+  color: var(--primary-color);
 }
 .photograph-aside {
   position: fixed;

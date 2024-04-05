@@ -1,11 +1,12 @@
 import { mediaFactory } from "./mediaFactory.js";
 
-export function mediaTemplate(data) {
+export function mediaTemplate(data, clickImg) {
   const card = document.createElement("article");
   card.className = "card";
   card.dataset.id = data.id;
 
   const media = mediaFactory(data, true);
+  media.addEventListener("click", clickImg);
   card.appendChild(media);
 
   const cardBody = document.createElement("div");

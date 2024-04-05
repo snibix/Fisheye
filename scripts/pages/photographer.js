@@ -1,6 +1,8 @@
 import { mediaTemplate } from "../templates/mediaCard.js";
+import { mediaFactory } from "../templates/mediaFactory.js";
 import { getPhotographer, getPhotographers } from "../utils/data.js";
-
+import { Lightbox } from "../utils/lightBox.js";
+import "./../utils/contactForm.js";
 //Mettre le code JavaScript lié à la page photographer.html
 function displayData(photographer) {
   // ...
@@ -19,8 +21,12 @@ function displayData(photographer) {
   photographImg.src = `./assets/photographers/portrait/${photographer.portrait}`;
 
   const mediaSection = document.querySelector(".photograph-medias");
-  photographer.medias.forEach((media) => {
-    mediaSection.appendChild(mediaTemplate(media));
+  photographer.medias.forEach((item, index) => {
+    const media = mediaTemplate(item, (e) => {
+      // showLightbox(photographer.medias, index);
+      lightbox.show(photographer.medias, index);
+    });
+    mediaSection.appendChild(media);
   });
 
   const totalLikes = document.querySelector("#totalLikes");
@@ -31,7 +37,7 @@ function displayData(photographer) {
   const price = document.querySelector("#price");
   price.textContent = photographer.price;
 }
-
+const lightbox = new Lightbox("#lightbox");
 async function init() {
   let params = new URLSearchParams(window.location.search);
   let photographerId = parseInt(params.get("id"));
