@@ -1,45 +1,49 @@
+import { lightbox } from "../utils/lightBox.js";
 import { mediaFactory } from "./mediaFactory.js";
 
-export function mediaTemplate(photographer, data, clickImg) {
+export function mediaCard(photographer, media, index) {
   const card = document.createElement("article");
   card.className = "card";
-  card.dataset.id = data.id;
+  card.dataset.id = media.id;
 
-  const media = mediaFactory(data, true);
-  media.addEventListener("click", clickImg);
-  card.appendChild(media);
+  const mediaElement = mediaFactory(media, true);
+  mediaElement.addEventListener("click", () => {
+    lightbox.show(photographer.medias, index);
+  });
+  card.appendChild(mediaElement);
 
   const cardBody = document.createElement("div");
   cardBody.className = "card-body";
 
   const cardTitle = document.createElement("h3");
   cardTitle.className = "card-title";
-  cardTitle.textContent = data.title;
+  cardTitle.textContent = media.title;
 
   const cardLikes = document.createElement("div");
   cardLikes.className = "card-likes";
 
   const numberLikes = document.createElement("span");
   numberLikes.className = "number-likes";
-  numberLikes.textContent = data.likes;
+  numberLikes.textContent = media.likes;
   cardLikes.appendChild(numberLikes);
 
   const btnLikes = document.createElement("button");
   btnLikes.className = "btn-likes";
 
+  // écouteur pour incrémenter ou décrémenter likes est total likes
   btnLikes.addEventListener("click", () => {
-    if (data.liked) {
-      data.likes--;
+    if (media.liked) {
+      media.likes--;
       photographer.likes--;
-      data.liked = false;
+      media.liked = false;
     } else {
-      data.likes++;
+      media.likes++;
       photographer.likes++;
-      data.liked = true;
+      media.liked = true;
     }
     const totalLikes = document.querySelector("#totalLikes");
     totalLikes.textContent = photographer.likes;
-    numberLikes.textContent = data.likes;
+    numberLikes.textContent = media.likes;
   });
 
   const heart = document.createElement("i");

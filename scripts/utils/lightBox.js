@@ -56,3 +56,5 @@ export class Lightbox {
     this.figure.appendChild(figcaption);
   }
 }
+
+export const lightbox = new Lightbox("#lightbox");

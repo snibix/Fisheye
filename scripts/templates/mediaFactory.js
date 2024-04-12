@@ -12,8 +12,6 @@ export const mediaFactory = (media, thumbnail = false) => {
   } else if (media.video) {
     content = document.createElement("video");
     content.src = `${path}/${media.photographerId}/${media.video}`;
-    content.alt = media.title;
-
     if (!thumbnail) {
       content.setAttribute("controls", "");
     }
