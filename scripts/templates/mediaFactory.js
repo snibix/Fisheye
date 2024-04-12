@@ -40,7 +40,7 @@ export const mediaFactory = (media, thumbnail = false) => {
 //   }
 // }
 
-// class mediaFactory {
+// class MediaFactory {
 //   constructor(data) {
 //     if (data.image) {
 //       return new Img(data);

@@ -168,9 +168,12 @@ form input {
   cursor: pointer;
 }
 .btn-likes .icon-likes {
-  font-weight: 900;
+  font-weight: 100;
   font-size: 23px;
   color: var(--primary-color);
+}
+.btn-likes .icon-likes:hover {
+  font-weight: 900;
 }
 .photograph-aside {
   position: fixed;

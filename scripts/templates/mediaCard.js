@@ -1,6 +1,6 @@
 import { mediaFactory } from "./mediaFactory.js";
 
-export function mediaTemplate(data, clickImg) {
+export function mediaTemplate(photographer, data, clickImg) {
   const card = document.createElement("article");
   card.className = "card";
   card.dataset.id = data.id;
@@ -27,8 +27,24 @@ export function mediaTemplate(data, clickImg) {
   const btnLikes = document.createElement("button");
   btnLikes.className = "btn-likes";
 
+  btnLikes.addEventListener("click", () => {
+    if (data.liked) {
+      data.likes--;
+      photographer.likes--;
+      data.liked = false;
+    } else {
+      data.likes++;
+      photographer.likes++;
+      data.liked = true;
+    }
+    const totalLikes = document.querySelector("#totalLikes");
+    totalLikes.textContent = photographer.likes;
+    numberLikes.textContent = data.likes;
+  });
+
   const heart = document.createElement("i");
   heart.className = "fa-solid fa-heart icon-likes";
+
   btnLikes.appendChild(heart);
 
   cardLikes.appendChild(btnLikes);

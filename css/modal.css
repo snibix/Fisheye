@@ -24,7 +24,8 @@
 }
 .modal_header .modal_title {
   text-align: left;
-  font: 3.5em bold;
+  font-size: 3.5em;
+  font-weight: 400;
   margin: 0;
   padding: 0;
 }
@@ -48,4 +49,7 @@
 }
 .contact_form input {
   height: 60px;
+}
+#message {
+  min-width: 100%;
 }

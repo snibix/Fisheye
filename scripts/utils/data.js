@@ -21,5 +21,8 @@ export async function getPhotographer(id) {
     (photographer) => photographer.id === id
   );
   photographer.medias = medias;
+  photographer.likes = medias.reduce((carry, media) => {
+    return carry + media.likes;
+  }, 0);
   return photographer;
 }
