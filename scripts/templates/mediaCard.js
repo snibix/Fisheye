@@ -1,16 +1,22 @@
 import { lightbox } from "../utils/lightBox.js";
-import { mediaFactory } from "./mediaFactory.js";
+import { MediaFactory } from "../components/MediaFactory.js";
 
 export function mediaCard(photographer, media, index) {
   const card = document.createElement("article");
   card.className = "card";
   card.dataset.id = media.id;
 
-  const mediaElement = mediaFactory(media, true);
-  mediaElement.addEventListener("click", () => {
+  const link = document.createElement("a");
+  link.href = "#";
+
+  const mediaElement = new MediaFactory(media, true);
+
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
     lightbox.show(photographer.medias, index);
   });
-  card.appendChild(mediaElement);
+  link.appendChild(mediaElement);
+  card.appendChild(link);
 
   const cardBody = document.createElement("div");
   cardBody.className = "card-body";
@@ -36,10 +42,12 @@ export function mediaCard(photographer, media, index) {
       media.likes--;
       photographer.likes--;
       media.liked = false;
+      btnLikes.className = "btn-likes";
     } else {
       media.likes++;
       photographer.likes++;
       media.liked = true;
+      btnLikes.className = "i-liked";
     }
     const totalLikes = document.querySelector("#totalLikes");
     totalLikes.textContent = photographer.likes;

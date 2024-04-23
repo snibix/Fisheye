@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
-  <link href="./css/style.css" rel="stylesheet" type="text/css" />
+  <link href="./css/style.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="./css/modal.css">
   <link rel="stylesheet" href="./css/lightbox.css">
   <meta charset="utf-8">
@@ -14,7 +14,7 @@
 <body>
   <header class="header-logo">
     <a href="./index.html">
-      <img src="assets/images/logo.png" class="logo" />
+      <img src="assets/images/logo.png" class="logo" alt="fisheye logo">
     </a>
   </header>
   <main id="main">
@@ -22,11 +22,11 @@
     <section class="photograph-header">
       <div>
         <h1 class="photograph-title"></h1>
-        <p class="photograph-country"></p>
+        <h2 class="photograph-country"></h2>
         <p class="photograph-tagline"></p>
       </div>
       <button class="contact_button">Contactez-moi</button>
-      <img src="" alt="" class="photograph-img">
+      <img src="./assets/photographers/portrait/" alt="photo de profil" class="photograph-img">
     </section>
 
     <section class="photograph-filter">
@@ -57,7 +57,7 @@
           <br>
           <span class="title_photograph"></span>
         </h2>
-        <img src="assets/icons/close.svg" id="close_modal" aria-label="close modal" alt="fermer" tabindex="11" />
+        <img src="assets/icons/close.svg" id="close_modal" aria-label="close modal" alt="fermer" tabindex="11">
       </header>
       <form class="contact_form">
         <div class="input-group">
@@ -87,15 +87,15 @@
       <figure tabindex="2" class="figure"></figure>
       <button tabindex="4" class="previous" type="button" aria-labelledby="previous-lightbox">
         <span class="fa-solid fa-angle-left" aria-hidden="true"></span>
-        <p id="previous-lightbox" class="sr-only">Précédent</p>
+        <span id="previous-lightbox" class="sr-only">Précédent</span>
       </button>
       <button tabindex="5" class="next" type="button" aria-labelledby="next-lightbox">
         <span class="fa-solid fa-angle-right" aria-hidden="true"></span>
-        <p id="next-lightbox" class="sr-only">Suivant</p>
+        <span id="next-lightbox" class="sr-only">Suivant</span>
       </button>
       <button tabindex="6" class="close" aria-labelledby="close-lightbox">
         <span class="fa-solid fa-xmark" aria-hidden="true"></span>
-        <p id="close-lightbox" class="sr-only">Fermer la modale</p>
+        <span id="close-lightbox" class="sr-only">Fermer la modale</span>
       </button>
     </div>
   </dialog>

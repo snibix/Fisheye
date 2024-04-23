@@ -1,4 +1,4 @@
-import { mediaFactory } from "../templates/mediaFactory.js";
+import { MediaFactory } from "../components/MediaFactory.js";
 
 export class Lightbox {
   constructor(selector = "#lightbox") {
@@ -19,6 +19,22 @@ export class Lightbox {
     this.target.querySelector(".next").addEventListener("click", (e) => {
       e.preventDefault();
       this.next();
+    });
+    // Gestion des événements clavier
+    document.addEventListener("keydown", (e) => {
+      if (this.target.open) {
+        switch (e.key) {
+          case "Escape":
+            this.close();
+            break;
+          case "ArrowLeft":
+            this.previous();
+            break;
+          case "ArrowRight":
+            this.next();
+            break;
+        }
+      }
     });
   }
 
@@ -52,7 +68,7 @@ export class Lightbox {
     const figcaption = document.createElement("figcaption");
     figcaption.textContent = media.title;
     figcaption.className = "legend";
-    this.figure.appendChild(mediaFactory(media, false));
+    this.figure.appendChild(new MediaFactory(media, false));
     this.figure.appendChild(figcaption);
   }
 }

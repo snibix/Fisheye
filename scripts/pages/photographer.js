@@ -39,7 +39,6 @@ function displayMedias(photographer) {
 async function init() {
   let params = new URLSearchParams(window.location.search);
   let photographerId = parseInt(params.get("id"));
-  console.log(photographerId);
   const photographer = await getPhotographer(photographerId);
 
   const dropDown = document.querySelector("#sort");

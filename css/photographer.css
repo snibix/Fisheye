@@ -97,6 +97,7 @@ form input {
 
 .photograph-header .photograph-country {
   font-size: 30px;
+  font-weight: 100;
   margin: 0;
   padding: 15px 10px;
   color: var(--primary-color);
@@ -174,6 +175,14 @@ form input {
 }
 .btn-likes .icon-likes:hover {
   font-weight: 900;
+}
+.i-liked {
+  font-weight: 900;
+  font-size: 23px;
+  color: var(--primary-color);
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 .photograph-aside {
   position: fixed;
