@@ -7,10 +7,10 @@ export function mediaCard(photographer, media, index) {
   card.dataset.id = media.id;
 
   const link = document.createElement("a");
-  link.href = "#";
 
   const mediaElement = new MediaFactory(media, true);
-
+  link.href = mediaElement.src;
+  link.ariaLabel = media.title;
   link.addEventListener("click", (e) => {
     e.preventDefault();
     lightbox.show(photographer.medias, index);
@@ -35,7 +35,8 @@ export function mediaCard(photographer, media, index) {
 
   const btnLikes = document.createElement("button");
   btnLikes.className = "btn-likes";
-
+  btnLikes.ariaLabel = "bouton likes";
+  //btnLikes.textContent = "bouton likes";
   // écouteur pour incrémenter ou décrémenter likes est total likes
   btnLikes.addEventListener("click", () => {
     if (media.liked) {

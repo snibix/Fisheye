@@ -3,22 +3,19 @@ const modal = document.querySelector("#contact_modal");
 const closeModal = document.querySelector("#close_modal");
 const titlePhotograph = document.querySelector(".title_photograph");
 const form = modal.querySelector(".contact_form");
-const firstFormField = form.querySelector("input"); // Premier champ du formulaire
-const lastFormField = closeModal; // Dernier champ du formulaire
 
 // Affiche la modal au clic du bouton "contactez-moi"
 btnContact.addEventListener("click", () => {
-  modal.style.display = "block";
+  // modal.style.display = "block";
+  modal.showModal();
   titlePhotograph.textContent =
     document.querySelector(".photograph-title").textContent;
-
-  // Définir le focus sur le premier champ du formulaire lorsque la modal s'ouvre
-  firstFormField.focus();
 });
 
 // Ferme la modal de contact
 function closeModalFunction() {
-  modal.style.display = "none";
+  // modal.style.display = "none";
+  modal.close();
 }
 
 closeModal.addEventListener("click", closeModalFunction);
@@ -47,11 +44,11 @@ form.addEventListener("submit", (e) => {
 });
 
 // Gérer le focus dans le formulaire pour empêcher le focus de sortir du formulaire
-lastFormField.addEventListener("keydown", (event) => {
-  if (event.key === "Tab" && !event.shiftKey) {
-    event.preventDefault();
-    firstFormField.focus();
-  } else if (event.key === "Enter") {
-    closeModalFunction(); // Fermer la modal lorsque la touche Entrée est pressée sur la croix de fermeture
-  }
-});
+// lastFormField.addEventListener("keydown", (event) => {
+//   if (event.key === "Tab" && !event.shiftKey) {
+//     event.preventDefault();
+//     firstFormField.focus();
+//   } else if (event.key === "Enter") {
+//     closeModalFunction(); // Fermer la modal lorsque la touche Entrée est pressée sur la croix de fermeture
+//   }
+// });

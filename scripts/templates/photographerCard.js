@@ -10,6 +10,7 @@ export function photographerCard(data) {
     const img = document.createElement("img");
     img.src = picture;
     img.className = "card-img";
+    img.alt = `Photos de profil ${name}`;
 
     const h2 = document.createElement("h2");
     h2.textContent = name;

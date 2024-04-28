@@ -30,7 +30,7 @@
     </section>
 
     <section class="photograph-filter">
-      <label for="sort">Tier par</label>
+      <label for="sort">Trier par</label>
       <select id="sort">
         <option value="likes">Popularité</option>
         <option value="dates">Date</option>
@@ -42,58 +42,60 @@
     </section>
     <aside class="photograph-aside">
       <div>
-        <span id="totalLikes">680</span>&nbsp;
+        <span id="totalLikes"></span>&nbsp;
         <span class="fa-solid fa-heart" aria-hidden="true"></span>
       </div>
       <div>
-        <span id="price">400</span>&nbsp;€&nbsp;/&nbsp;jour
+        <span id="price"></span>
       </div>
     </aside>
   </main>
-  <div id="contact_modal" class="overlay_modal">
-    <div class="modal">
+  <dialog id="contact_modal" class="overlay_modal">
+    <div class="modal" tabindex="1">
       <header class="modal_header">
-        <h2 class="modal_title" tabindex="1">Contactez-moi
+        <h2 class="modal_title" tabindex="2">Contactez-moi
           <br>
           <span class="title_photograph"></span>
         </h2>
-        <img src="assets/icons/close.svg" id="close_modal" aria-label="close modal" alt="fermer" tabindex="11">
+        <button class="btn-closes" id="close_modal" aria-label="close modal" tabindex="12">
+          <img src="assets/icons/close.svg" alt="" aria-hidden="true">
+        </button>
       </header>
       <form class="contact_form">
         <div class="input-group">
-          <label tabindex="2" for="firstname">Prénom</label>
-          <input tabindex="3" type="text" id="firstname" placeholder="Votre prénom">
+          <label tabindex="3" for="firstname">Prénom</label>
+          <input tabindex="4" type="text" id="firstname" placeholder="Votre prénom">
         </div>
         <div class="input-group">
-          <label tabindex="4" for="lastname">Nom</label>
-          <input tabindex="5" type="text" id="lastname" placeholder="Votre nom">
+          <label tabindex="5" for="lastname">Nom</label>
+          <input tabindex="6" type="text" id="lastname" placeholder="Votre nom">
         </div>
         <div class="input-group">
-          <label tabindex="6" for="email">Email</label>
-          <input tabindex="7" type="email" id="email" placeholder="Votre email" required aria-required="true">
+          <label tab="7" for="email">Email</label>
+          <input tabindex="8" type="email" id="email" placeholder="Votre email" required aria-required="true">
         </div>
         <div class="input-group">
-          <label tabindex="8" for="message">Votre message</label>
-          <textarea tabindex="9" name="message" id="message" rows="10" placeholder="Votre message" required
+          <label tabindex="9" for="message">Votre message</label>
+          <textarea tabindex="10" name="message" id="message" rows="10" placeholder="Votre message" required
             aria-required="true"></textarea>
         </div>
-        <button class="contact_button" tabindex="10">Envoyer</button>
+        <button class="contact_button" tabindex="11">Envoyer</button>
       </form>
     </div>
-  </div>
+  </dialog>
 
   <dialog id="lightbox" aria-hidden="true" aria-label="Image closeup view">
     <div tabindex="1" class="content">
-      <figure tabindex="2" class="figure"></figure>
-      <button tabindex="4" class="previous" type="button" aria-labelledby="previous-lightbox">
+      <figure class="figure"></figure>
+      <button tabindex="3" class="previous" type="button" aria-labelledby="previous-lightbox">
         <span class="fa-solid fa-angle-left" aria-hidden="true"></span>
         <span id="previous-lightbox" class="sr-only">Précédent</span>
       </button>
-      <button tabindex="5" class="next" type="button" aria-labelledby="next-lightbox">
+      <button tabindex="4" class="next" type="button" aria-labelledby="next-lightbox">
         <span class="fa-solid fa-angle-right" aria-hidden="true"></span>
         <span id="next-lightbox" class="sr-only">Suivant</span>
       </button>
-      <button tabindex="6" class="close" aria-labelledby="close-lightbox">
+      <button tabindex="5" class="close" aria-labelledby="close-lightbox">
         <span class="fa-solid fa-xmark" aria-hidden="true"></span>
         <span id="close-lightbox" class="sr-only">Fermer la modale</span>
       </button>

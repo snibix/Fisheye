@@ -24,7 +24,7 @@ function displayData(photographer) {
   totalLikes.textContent = photographer.likes;
 
   const price = document.querySelector("#price");
-  price.textContent = photographer.price;
+  price.textContent = `${photographer.price}€ / jour`;
 }
 
 function displayMedias(photographer) {
@@ -68,7 +68,6 @@ function sortBy(medias, by) {
         } else {
           return 0;
         }
-        // return media1.title.localeCompare(media2.title);
       });
       break;
     case "dates":

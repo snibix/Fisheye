@@ -67,6 +67,7 @@ export class Lightbox {
     this.figure.innerHTML = "";
     const figcaption = document.createElement("figcaption");
     figcaption.textContent = media.title;
+    figcaption.tabIndex = "2";
     figcaption.className = "legend";
     this.figure.appendChild(new MediaFactory(media, false));
     this.figure.appendChild(figcaption);

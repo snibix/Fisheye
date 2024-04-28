@@ -4,7 +4,7 @@
 }
 
 #contact_modal {
-  display: none;
+  border: none;
 }
 
 .contact_button {
@@ -147,6 +147,10 @@ form input {
   gap: 0.5em;
   font-size: 1.5em;
   font-weight: bold;
+}
+.btn-closes {
+  background: none;
+  border: none;
 }
 .photograph-medias .card-title {
   color: var(--primary-color);
