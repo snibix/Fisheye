@@ -1,7 +1,7 @@
 export function photographerCard(data) {
   const { name, portrait, country, city, tagline, price, id } = data;
 
-  const picture = `assets/photographers/portrait/${portrait}`;
+  const picture = `./assets/photographers/portrait/${portrait}`;
 
   function getUserCardDOM() {
     const article = document.createElement("article");
